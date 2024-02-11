@@ -1,4 +1,4 @@
-# Semantic Image Synthesis via Diffusion Models (SDM)
+# Layout-to-image Defect Synthesis via Diffusion Models
 
 &nbsp;
 
