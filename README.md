@@ -2,7 +2,8 @@
 
 &nbsp;
 
-<img src='assets\results.png' align="left">  
+<img src='assets\framework.png' align="center">  
+
 
 
 
@@ -33,13 +34,14 @@ which can be used for data augmentation and further industrial purposes.
 * **COCO-Stuff:**
 
 <p align='center'>  
-  <img src='assets/coco.png'/>
+  <img src='assets\Coco-stuff-evaluation-2.png'/>
 </p>
 
 * **Surface Defect Inspection(SDI) dataset:**
 
+
 <p align='center'>  
-  <img src='assets/coco.png'/>
+  <img src='assets/SDI-evaluation-2.png'/>
 </p>
 
 ## Prerequisites
@@ -85,17 +87,12 @@ mpiexec -n 8 python image_sample.py --data_dir ./data/ade20k --dataset_mode ade2
                                     --model_path OUTPUT/ADE20K-SDM-256CH-FINETUNE/ema_0.9999_best.pt --results_path RESULTS/ADE20K-SDM-256CH
 ```
 
-Please refer to the 'scripts/ade20.sh' for more details.
-
-### Apply a pre-trained NEGCUT model and evaluate
+### Apply a pre-trained model and evaluate
 
 #### Pretrained Models (to be updated)
 |Dataset       |Download link     |
 |:-------------|:-----------------|
-|Cityscapes|[Visual results](https://drive.google.com/file/d/1TbLGCFJqRI4E8pFZJoHmj8MgDbwtjzhP/view?usp=sharing)|
-|ADE20K|[Checkpoint](https://drive.google.com/file/d/1O8Avsvfc8rP9LIt5tkJxowMTpi1nYiik/view?usp=sharing) \| [Visual results](https://drive.google.com/file/d/1NIXmrlBHqgyMHAoLBlmU8YELmL8Ij4kV/view?usp=sharing)|
-|CelebAMask-HQ |[Checkpoint](https://drive.google.com/file/d/1iwpruJ5HMHdAA1tuNR8dHkcjGtxzSFV_/view?usp=sharing) \| [Visual results](https://drive.google.com/file/d/1NDfU905iJINu4raoj4JdMOiHP8rTXr_M/view?usp=sharing)|
-|COCO-Stuff |[Checkpoint](https://drive.google.com/file/d/17XhegAk8V5W3YiFpHMBUn0LED-n7B44Y/view?usp=sharing) \| [Visual results](https://drive.google.com/file/d/1ZluvN9spJF8jlXlSQ98ekWTmHrzwYCqo/view?usp=sharing)|
+|COCO-Stuff |[Checkpoint](to be updated) \| [Visual results](to be updated)|
 
 - To evaluate the model (e.g., ADE20K), first generate the test results:
 ```bash
@@ -117,4 +114,4 @@ python evaluations/lpips.py GENERATED_IMAGES_DIR
 ```
 
 ### Acknowledge
-Our code is developed based on [guided-diffusion](https://github.com/openai/guided-diffusion). We also thank "test_with_FID.py" in [OASIS](https://github.com/boschresearch/OASIS) for FID computation, "lpips.py" in [stargan-v2](https://github.com/clovaai/stargan-v2) for LPIPS computation.
+Our code is developed based on [LostGANs](https://github.com/WillSuen/LostGANs.git) and Semantic Diffusion model ([SDM](https://github.com/WeilunWang/semantic-diffusion-model.git)). We also thank "test_with_FID.py" in [OASIS](https://github.com/boschresearch/OASIS) for FID computation, "lpips.py" in [stargan-v2](https://github.com/clovaai/stargan-v2) for LPIPS computation.
