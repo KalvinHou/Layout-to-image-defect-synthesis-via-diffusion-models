@@ -59,8 +59,9 @@ To annotate the images and customize the labeled bounding boxes, we used the sof
 ### Training and Test
 
 - Download the dataset.
-
+to be updated ...
 - Train the STAY-diffusion model:
+to be updated ...
 <!--
 ```bash
 export OPENAI_LOGDIR='OUTPUT/ADE20K-SDM-256CH'
@@ -73,6 +74,7 @@ mpiexec -n 8 python image_train.py --data_dir ./data/ade20k --dataset_mode ade20
 
 
 - Fine-tune the STAY-diffusion model:
+to be updated ...
 <!--
 ```bash
 export OPENAI_LOGDIR='OUTPUT/ADE20K-SDM-256CH-FINETUNE'
@@ -84,6 +86,7 @@ mpiexec -n 8 python image_train.py --data_dir ./data/ade20k --dataset_mode ade20
 -->
 
 - Test the STAY-diffusion model:
+to be updated ...
 <!--
 ```bash
 mpiexec -n 8 python image_sample.py --data_dir ./data/ade20k --dataset_mode ade20k --attention_resolutions 32,16,8 --diffusion_steps 1000 \
@@ -101,7 +104,8 @@ mpiexec -n 8 python image_sample.py --data_dir ./data/ade20k --dataset_mode ade2
 |:-------------|:-----------------|
 |COCO-Stuff |[Checkpoint](to be updated) \| [Visual results](to be updated)|
 
-- To evaluate the model (e.g., ADE20K), first generate the test results:
+- To evaluate the model (e.g., COCO-stuff), first generate the test results:
+to be updated ...
 <!--
 ```bash
 mpiexec -n 8 python image_sample.py --data_dir ./data/ade20k --dataset_mode ade20k --attention_resolutions 32,16,8 --diffusion_steps 1000 \
