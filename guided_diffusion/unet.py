@@ -7,9 +7,9 @@ import torch as th
 import torch.nn as nn
 import torch.nn.functional as F
 
-from lostGAN.nodm_module import *
+from lostGAN.norm_module import *
 from lostGAN.mask_regression import *
-from lostGANsync_batchnorm import SynchronizedBatchNorm2d
+from lostGAN.sync_batchnorm import SynchronizedBatchNorm2d
 
 BatchNorm = SynchronizedBatchNorm2d
 
