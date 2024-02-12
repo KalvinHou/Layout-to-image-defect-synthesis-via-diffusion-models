@@ -54,7 +54,7 @@ The Coco-stuff dataset can be downloaded and prepared following [COCO-stuff](htt
 
 The Surface Defect Inspection(SDI) dataset is a real industrial dataset(private) that consists of 20,414 greyscale images at various sizes.
 To adapt the SDI dataset for the layout-to-image synthesis task, we did data labeling for acquiring the layout information. 
-To annotate the images and customize the labeled bounding boxes, we used the software tool called Visual Object Tagging Toolkit ([VOTT])(https://github.com/microsoft/VoTT.git) which was developed by Microsoft.
+To annotate the images and customize the labeled bounding boxes, we used the software tool called Visual Object Tagging Toolkit ([VOTT](https://github.com/microsoft/VoTT.git)) which was developed by Microsoft.
 
 ### NEGCUT Training and Test
 
@@ -114,4 +114,4 @@ python evaluations/lpips.py GENERATED_IMAGES_DIR
 ```
 
 ### Acknowledge
-Our code is developed based on [LostGANs](https://github.com/WillSuen/LostGANs.git) and Semantic Diffusion model ([SDM](https://github.com/WeilunWang/semantic-diffusion-model.git)). We also thank "test_with_FID.py" in [OASIS](https://github.com/boschresearch/OASIS) for FID computation, "lpips.py" in [stargan-v2](https://github.com/clovaai/stargan-v2) for LPIPS computation.
+Our code is developed based on [LostGANs](https://github.com/WillSuen/LostGANs.git) and Semantic Diffusion model ([SDM](https://github.com/WeilunWang/semantic-diffusion-model.git)).
