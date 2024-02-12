@@ -52,7 +52,7 @@ The Coco-stuff dataset can be downloaded and prepared following [COCO-stuff](htt
 
 The Surface Defect Inspection(SDI) dataset is a real industrial dataset(private) that consists of 20,414 greyscale images at various sizes.
 To adapt the SDI dataset for the layout-to-image synthesis task, we did data labeling for acquiring the layout information. 
-To annotate the images and customize the labeled bounding boxes, we used the software tool called Visual Object Tagging Toolkit(VOTT) [VOTT](https://github.com/microsoft/VoTT.git) which was developed by Microsoft.
+To annotate the images and customize the labeled bounding boxes, we used the software tool called Visual Object Tagging Toolkit ([VOTT])(https://github.com/microsoft/VoTT.git) which was developed by Microsoft.
 
 ### NEGCUT Training and Test
 
