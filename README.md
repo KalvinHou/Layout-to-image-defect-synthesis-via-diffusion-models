@@ -4,25 +4,28 @@
 
 <img src='assets\results.png' align="left">  
 
-&nbsp;
 
-<img src='assets/diffusion.png' align="left">
 
-&nbsp;
-
-### [Paper](https://arxiv.org/abs/2207.00050)
-
-[Weilun Wang](https://scholar.google.com/citations?hl=zh-CN&user=YfV4aCQAAAAJ), [Jianmin Bao](https://scholar.google.com/citations?hl=zh-CN&user=hjwvkYUAAAAJ), [Wengang Zhou](https://scholar.google.com/citations?hl=zh-CN&user=8s1JF8YAAAAJ), [Dongdong Chen](https://scholar.google.com/citations?hl=zh-CN&user=sYKpKqEAAAAJ), [Dong Chen](https://scholar.google.com/citations?hl=zh-CN&user=_fKSYOwAAAAJ), [Lu Yuan](https://scholar.google.com/citations?hl=zh-CN&user=k9TsUVsAAAAJ), [Houqiang Li](https://scholar.google.com/citations?hl=zh-CN&user=7sFMIKoAAAAJ),
 
 ## Abstract
 
-We provide our PyTorch implementation of Semantic Image Synthesis via Diffusion Models (SDM). 
-In this paper, we propose a novel framework based on DDPM for semantic image synthesis.
-Unlike previous conditional diffusion model directly feeds the semantic layout and noisy image as input to a U-Net structure, which may not fully leverage the information in the input semantic mask,
-our framework processes semantic layout and noisy image differently.
-It feeds noisy image to the encoder of the U-Net structure while the semantic layout to the decoder by multi-layer spatially-adaptive normalization operators. 
-To further improve the generation quality and semantic interpretability in semantic image synthesis, we introduce the classifier-free guidance sampling strategy, which acknowledge the scores of an unconditional model for sampling process.
-Extensive experiments on three benchmark datasets demonstrate the effectiveness of our proposed method, achieving state-of-the-art performance in terms of fidelity (FID) and diversity (LPIPS).
+In recent years, 
+huge progress has been made in image synthesis through the improvement of state-of-the-art generative models 
+(e.g., VAEs, autoregressive models, and GANs). 
+Now with the help of diffusion models, 
+it reaches a brand-new level. 
+However, applying diffusion models on conditional image synthesis still faces limitations and requires further investigations, especially for coarse spatial layouts, 
+i.e., generating realistic images with the corrected objects in the desired locations.
+
+In this master thesis, 
+we introduced a style-based layout-to-image conditional diffusion model (STAY diffusion). 
+To process the layout information, 
+we extended the object instance-specific and layout-aware feature normalization (ISLA-Norm) used in LostGAN and adapted it for the proposed diffusion model framework. 
+By training the novel model on the COCO-Stuff dataset, 
+our method achieved state-of-the-art performance on image fidelity and diversity compared to other layout-to-image models. 
+In addition, 
+we trained the proposed model on the surface defect inspection (SDI) dataset from Robert Bosch to generate defective product surfaces while maintaining both high diversity and image quality, 
+which can be used for data augmentation and further industrial purposes.
 
 
 ## Example Results
