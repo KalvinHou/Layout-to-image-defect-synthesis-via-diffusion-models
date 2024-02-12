@@ -56,11 +56,12 @@ The Surface Defect Inspection(SDI) dataset is a real industrial dataset(private)
 To adapt the SDI dataset for the layout-to-image synthesis task, we did data labeling for acquiring the layout information. 
 To annotate the images and customize the labeled bounding boxes, we used the software tool called Visual Object Tagging Toolkit ([VOTT](https://github.com/microsoft/VoTT.git)) which was developed by Microsoft.
 
-### NEGCUT Training and Test
+### Training and Test
 
 - Download the dataset.
 
-- Train the SDM model:
+- Train the STAY-diffusion model:
+<!--
 ```bash
 export OPENAI_LOGDIR='OUTPUT/ADE20K-SDM-256CH'
 mpiexec -n 8 python image_train.py --data_dir ./data/ade20k --dataset_mode ade20k --lr 1e-4 --batch_size 4 --attention_resolutions 32,16,8 --diffusion_steps 1000 \
@@ -68,8 +69,11 @@ mpiexec -n 8 python image_train.py --data_dir ./data/ade20k --dataset_mode ade20
                                    --resblock_updown True --use_fp16 True --use_scale_shift_norm True --use_checkpoint True --num_classes 151 \
 	                           --class_cond True --no_instance True
 ```
+-->
 
-- Fine-tune the SDM model:
+
+- Fine-tune the STAY-diffusion model:
+<!--
 ```bash
 export OPENAI_LOGDIR='OUTPUT/ADE20K-SDM-256CH-FINETUNE'
 mpiexec -n 8 python image_train.py --data_dir ./data/ade20k --dataset_mode ade20k --lr 2e-5 --batch_size 4 --attention_resolutions 32,16,8 --diffusion_steps 1000 \
@@ -77,8 +81,10 @@ mpiexec -n 8 python image_train.py --data_dir ./data/ade20k --dataset_mode ade20
                                    --resblock_updown True --use_fp16 True --use_scale_shift_norm True --use_checkpoint True --num_classes 151 --class_cond True \
                                    --no_instance True --drop_rate 0.2 --resume_checkpoint OUTPUT/ADE20K-SDM-256CH/model.pt
 ```
+-->
 
-- Test the SDM model:
+- Test the STAY-diffusion model:
+<!--
 ```bash
 mpiexec -n 8 python image_sample.py --data_dir ./data/ade20k --dataset_mode ade20k --attention_resolutions 32,16,8 --diffusion_steps 1000 \
                                     --image_size 256 --learn_sigma True --noise_schedule linear --num_channels 256 --num_head_channels 64 \ 
@@ -86,6 +92,7 @@ mpiexec -n 8 python image_sample.py --data_dir ./data/ade20k --dataset_mode ade2
                                     --class_cond True --no_instance True --batch_size 2 --num_samples 2000 --s 1.5 \
                                     --model_path OUTPUT/ADE20K-SDM-256CH-FINETUNE/ema_0.9999_best.pt --results_path RESULTS/ADE20K-SDM-256CH
 ```
+-->
 
 ### Apply a pre-trained model and evaluate
 
@@ -95,6 +102,7 @@ mpiexec -n 8 python image_sample.py --data_dir ./data/ade20k --dataset_mode ade2
 |COCO-Stuff |[Checkpoint](to be updated) \| [Visual results](to be updated)|
 
 - To evaluate the model (e.g., ADE20K), first generate the test results:
+<!--
 ```bash
 mpiexec -n 8 python image_sample.py --data_dir ./data/ade20k --dataset_mode ade20k --attention_resolutions 32,16,8 --diffusion_steps 1000 \
                                     --image_size 256 --learn_sigma True --noise_schedule linear --num_channels 256 --num_head_channels 64 \ 
@@ -102,6 +110,7 @@ mpiexec -n 8 python image_sample.py --data_dir ./data/ade20k --dataset_mode ade2
                                     --class_cond True --no_instance True --batch_size 2 --num_samples 2000 --s 1.5 \
                                     --model_path OUTPUT/ADE20K-SDM-256CH-FINETUNE/ema_0.9999_best.pt --results_path RESULTS/ADE20K-SDM-256CH
 ```
+-->
 
 - To calucate FID metric, you should update "path1" and "path2" in "evaluations/test_with_FID.py" and run:
 ```bash
