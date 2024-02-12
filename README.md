@@ -29,25 +29,14 @@ which can be used for data augmentation and further industrial purposes.
 
 
 ## Example Results
-* **Cityscapes:**
-
-<p align='center'>  
-  <img src='assets/cityscapes.png'/>
-</p>
-
-* **CelebA:**
-
-<p align='center'>  
-  <img src='assets/celeba.png'/>
-</p>
-
-* **ADE20K:**
-
-<p align='center'>  
-  <img src='assets/ade.png'/>
-</p>
 
 * **COCO-Stuff:**
+
+<p align='center'>  
+  <img src='assets/coco.png'/>
+</p>
+
+* **Surface Defect Inspection(SDI) dataset:**
 
 <p align='center'>  
   <img src='assets/coco.png'/>
@@ -59,7 +48,11 @@ which can be used for data augmentation and further industrial purposes.
 - CPU or NVIDIA GPU + CUDA CuDNN
 
 ## Dataset Preparation
-The Cityscapes and ADE20K dataset can be downloaded and prepared following [SPADE](https://github.com/NVlabs/SPADE.git). The CelebAMask-HQ can be downloaded from [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ), you need to to integrate the separated annotations into an image file (the format like other datasets, e.g. Cityscapes and ADE20K). 
+The Coco-stuff dataset can be downloaded and prepared following [COCO-stuff](https://github.com/nightrome/cocostuff.git)
+
+The Surface Defect Inspection(SDI) dataset is a real industrial dataset(private) that consists of 20,414 greyscale images at various sizes.
+To adapt the SDI dataset for the layout-to-image synthesis task, we did data labeling for acquiring the layout information. 
+To annotate the images and customize the labeled bounding boxes, we used the software tool called Visual Object Tagging Toolkit(VOTT) [VOTT](https://github.com/microsoft/VoTT.git) which was developed by Microsoft.
 
 ### NEGCUT Training and Test
 
