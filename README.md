@@ -1,4 +1,4 @@
-# Layout-to-image Defect Synthesis via Diffusion Models
+# Layout-to-image Defect Synthesis via Diffusion Models (STAY-Diffusion)
 
 &nbsp;
 
@@ -50,7 +50,7 @@ which can be used for data augmentation and further industrial purposes.
 - CPU or NVIDIA GPU + CUDA CuDNN
 
 ## Dataset Preparation
-The Coco-stuff dataset can be downloaded and prepared following [COCO-stuff](https://github.com/nightrome/cocostuff.git)
+The COCO-stuff dataset can be downloaded and prepared following [COCO-stuff](https://github.com/nightrome/cocostuff.git)
 
 The Surface Defect Inspection(SDI) dataset is a real industrial dataset(private) that consists of 20,414 greyscale images at various sizes.
 To adapt the SDI dataset for the layout-to-image synthesis task, we did data labeling for acquiring the layout information. 
